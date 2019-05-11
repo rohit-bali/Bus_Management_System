@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <style>
+            body
+            {
+                background-image:url("pexels-photo-385997.jpeg") ;
+                background-repeat:none;
+}
+            .middle
+            {
+
+                height: 700px;
+            }
+
+            .div01
+            {
+                border-radius:25px;
+                height:650px;
+                width: 400px;
+                background-color:white;
+                margin-top:0px;
+                margin-left:27vw;
+                font-size:20px;
+                float:left;
+                padding-left:40px;
+                padding-right:100px;
+                background: linear-gradient(to bottom, #6699ff 0%,#993333 100%);
+            }
+            .div01 a
+            {
+                padding: 10px 30px;
+                float:left;
+            }
+        </style>
+    </head>
+    <body>
+       <div class="container">
+       <div class="middle">
+           <div class="div3">
+          <center> <p style="color: red;font-size: 35px;height: 50px;width:400px;background-color: whitesmoke;margin-top: 0;text-align: center;border-bottom-right-radius:  40px;">Sign Up</p>
+<p><font color= white> Please fill in this form to create an account.</font></p></center>
+           </div>
+              <center><div class="div01">
+  <form name="MyForm" action="LogServlet" method="post" onsubmit= "return MyValidation()">
+<h3 style="margin-left:60px">Name</h3>
+<input type="text" name="name" style="margin-left: 60px;font-size: 20px;" onblur="style.background='grey'">
+<h3 style="margin-left:60px">Password</h3>
+<input type="password" name="psw" style="margin-left: 60px;font-size: 20px" onblur="style.background='grey'"><br>
+          <h3 style="margin-left:60px">Email</h3>
+                    <input type="text" name="email" style="margin-left: 60px;font-size: 20px;"  onblur="style.background='grey'">
+                    <h3 style="margin-left:60px">Mobile</h3>
+                    <input type="mobile" name="mbl" style="margin-left: 60px;font-size: 20px"  onblur="style.background='grey'"><br>
+                    <h3 style="margin-left:60px">Address</h3>
+                    <input type="address" name="adrs" style="margin-left: 60px;font-size: 20px"  onblur="style.background='grey'"><br>
+<input type="checkbox" style="margin-left: 60px;size: 20px;margin-top: 20px">Remember<br><br>
+  <input type="submit" value="Sign Up" style="background-color:red;color:white;text-decoration:none;font-size:20px;margin-right:40px;padding:20px 150px;border: 1px;border-radius:60px;margin-left:46px;"></form>
+                </div></center>
+        </div>
+      </div>
+      <script>
+        function MyValidation(){
+        var value= document.forms["MyForm"]["name"].value;
+        var value2= document.forms["MyForm"]["psw"].value;
+       var value3= document.forms["MyForm"]["email"].value;
+  var value4= document.forms["MyForm"]["mbl"].value;
+    var value5= document.forms["MyForm"]["adrs"].value;
+        var flag=true;
+  if(value==""){
+    alert("Name cannot be empty");
+    flag=false;
+  }
+  if(value2==""){
+    alert("password cannot be empty");
+    flag=false;
+  }
+  if(value3==""){
+    alert("Email cannot be empty");
+    flag=false;
+  }
+  if(value4=="" || isNaN(value4)|| !(value4>=1 && value4<=10)){
+    alert("Invalid value");
+    flag=false;
+  }
+  if(value5==""){
+    alert("Address cannot be empty");
+    flag=false;
+  }
+  return flag;
+  }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<html>
+    <head>
+      <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body
+            {
+                background:url("pexels-photo-62276.jpeg") no-repeat center center fixed;
+                background-size:cover;
+            }
+
+            .div01
+            {
+              padding: 40px;
+                border-radius:25px;
+                height:500px;
+                width: 400px;
+                background-color:white;
+                font-size:20px;
+                background: linear-gradient(to bottom, #3366cc 0%,#333300 100%);
+                margin-top: 55px;
+                margin-left: 800px;
+            }
+            .div01 a
+            {
+                padding: 10px 30px;
+            }
+            .button{
+              width: 100%;
+              margin-top: 5;
+            }
+        </style>
+    </head>
+    <body>
+       <div class="container">
+           <div class="div3">
+          <center> <p style="color: red;font-size: 35px;height: 50px;width:400px;background-color: whitesmoke;margin-top:0;  margin-left: 800px;text-align: center;border-bottom-right-radius:  40px;">Login</p>
+           </div>
+                <form name="MyForm" class="form-group div01" action="logservlet" method="post" onsubmit= "return MyValidation()">
+                  <h3 style="margin-left:60px; color:white;">Username</h3>
+                  <input type="text" name="username" class="form-control" onblur="style.background='grey'" required>
+                  <h3 style="margin-left:60px;color:white;">Password</h3>
+                  <input type="password" class="form-control"  name="password" onblur="style.background='grey'" required><br>
+                      <h3 style="margin-left:60px; color:white;">Type Of User: </h3>
+                      <select name="selects" class="form-control" onblur="style.background='grey'">
+                          <option value="Admin">Admin</option>
+                            <option value="Faculty">Faculty</option>
+                          <option value="User">User</option>
+                          
+                            </select><br>
+                            <input type="submit" value="Login" class="btn btn-lg button btn-danger">
+                          </form>
+        </div>
+      <script>
+        function MyValidation(){
+        var value= document.forms["MyForm"]["name"].value;
+        var value2= document.forms["MyForm"]["psw"].value;
+        var flag=true;
+  if(value==""){
+    alert("Name cannot be empty");
+    flag=false;
+  }
+  if(value2==""){
+    alert("password cannot be empty");
+    flag=false;
+  }
+  return flag;
+  }
+        </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>
